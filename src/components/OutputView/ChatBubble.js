@@ -8,7 +8,7 @@ import { StyledChatBubble } from './styles';
 
 function ChatBubble({ data, loading, handleBookmark, handleCopyAnswer }) {
     return (
-        <div>
+        <div className="chatbubble__container">
             {data.map((el, idx) => (
                 <>
                     {el.ques && (

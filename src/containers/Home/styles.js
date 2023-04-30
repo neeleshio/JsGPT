@@ -34,12 +34,7 @@ export const StyledHome = styled.div`
 
         @media screen and (max-width: 768px) {
             width: 100%;
-            padding: 30px 0 20px 0;
-        }
-
-        @media screen and (max-width: 580px) {
-            width: 100%;
-            padding: 30px 0 20px 0;
+            padding: 0 0 20px 0;
         }
     }
 `;

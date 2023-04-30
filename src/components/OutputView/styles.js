@@ -11,12 +11,21 @@ export const StyledOutputView = styled.div`
         overflow-y: auto;
         padding: 0 50px;
 
+        .chatbubble__container {
+            @media screen and (max-width: 768px) {
+                padding: 30px 30px 0 30px;
+            }
+            @media screen and (max-width: 580px) {
+                padding: 20px 15px 0 15px;
+            }
+        }
+
         @media screen and (max-width: 1200px) {
             padding: 0 30px;
         }
 
-        @media screen and (max-width: 580px) {
-            padding: 0 15px;
+        @media screen and (max-width: 768px) {
+            padding: 0;
         }
     }
 
@@ -97,13 +106,12 @@ export const StyledChatBubble = styled.div`
 
         @media screen and (max-width: 1200px) {
             width: 12.5%;
-            margin-right: 20px;
         }
 
         @media screen and (max-width: 992px) {
             width: 15%;
-            margin-left: 20px;
-            margin-right: ${({ bubble }) => !bubble && '0px'};
+            margin-right: ${({ bubble }) => bubble && '20px'};
+            margin-left: ${({ bubble }) => !bubble && '20px'};
         }
 
         @media screen and (max-width: 768px) {
@@ -184,7 +192,7 @@ export const StyledMobileBtns = styled.div`
         box-shadow: rgba(22, 23, 24, 0.35) 0px 10px 38px -10px,
             rgba(22, 23, 24, 0.2) 0px 10px 20px -15px;
 
-        div:nth-child(2) {
+        div:nth-child(1) {
             padding-top: 16px;
         }
 
@@ -275,5 +283,39 @@ export const StyledMobileBtns = styled.div`
 
     @media screen and (max-width: 450px) {
         margin-right: 30px;
+    }
+`;
+
+export const StyledMobileNav = styled.div`
+    padding: 5px 15px;
+    height: 60px;
+    background-color: #10a37f;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    border-radius: 0 0 4px 4px;
+
+    .mobilenav__container {
+        display: flex;
+        align-items: center;
+        margin-right: 30px;
+    }
+
+    .logo-text {
+        font-size: 22px;
+        font-weight: 600;
+        position: relative;
+
+        .version {
+            font-size: 12px;
+            padding-left: 5px;
+            position: absolute;
+            bottom: -2px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        display: flex;
     }
 `;

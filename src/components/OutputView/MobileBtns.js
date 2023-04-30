@@ -40,12 +40,6 @@ function MobileBtns({ darkTheme }) {
     return (
         <StyledMobileBtns>
             <div className={showMenu ? 'mobilebtns__menu show-menu' : 'mobilebtns__menu'}>
-                <div className="mobilebtns__menu__logo">
-                    <GptLogo fill="#1A2B1F" />
-                    <span className="logo-text">
-                        JsGPT<span className="version">v1.3</span>
-                    </span>
-                </div>
                 {nav_items({
                     fill: lightThemeColors.primary
                 }).map((el) => (

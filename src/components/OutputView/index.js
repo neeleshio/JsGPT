@@ -10,7 +10,8 @@ import { INITIAL_DATA_STATE } from '../constants';
 import SearchBox from '../SearchBox';
 import ChatBubble from './ChatBubble';
 import MobileBtns from './MobileBtns';
-import { StyledOutputView, StyledMobileBtns } from './styles';
+import MobileNav from './MobileNav';
+import { StyledOutputView } from './styles';
 
 function OutputView() {
     const dispatch = useDispatch();
@@ -102,6 +103,7 @@ function OutputView() {
     return (
         <StyledOutputView>
             <div className="outputview__top">
+                <MobileNav />
                 <ChatBubble
                     data={data}
                     inputQuestion={inputQuestion}
