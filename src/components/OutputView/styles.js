@@ -31,9 +31,6 @@ export const StyledOutputView = styled.div`
 
     .outputview__bottom {
         height: 10%;
-        display: flex;
-        flex-direction: column;
-        justify-content: end;
         padding: 0 50px;
         margin-top: 20px;
 
@@ -42,13 +39,16 @@ export const StyledOutputView = styled.div`
         }
 
         @media screen and (max-width: 768px) {
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
             margin-top: 0;
             position: fixed;
             bottom: 0;
             margin-bottom: 10px;
+            width: 100%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: baseline;
         }
 
         @media screen and (max-width: 580px) {
@@ -316,13 +316,28 @@ export const StyledMobileNav = styled.div`
     .mobilenav__container {
         display: flex;
         align-items: center;
+    }
+
+    .mobilenav__social__container {
+        display: flex;
         margin-right: 30px;
+
+        button {
+            border: none;
+            background: none;
+            padding: 0;
+
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
     }
 
     .mobilenav__social {
         display: flex;
         align-items: center;
-        margin-right: 25px;
+        margin-right: 20px;
         background: none;
         border: none;
         padding: 5px;

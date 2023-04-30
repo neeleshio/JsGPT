@@ -53,6 +53,6 @@ export const StyledSearchBox = styled.div`
     }
 
     @media screen and (max-width: 768px) {
-        width: 90%;
+        width: 92%;
     }
 `;

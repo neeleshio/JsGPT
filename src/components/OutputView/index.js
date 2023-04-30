@@ -116,7 +116,7 @@ function OutputView() {
                 <div ref={chatEndRef}></div>
             </div>
             <div className="outputview__bottom">
-                <MobileBtns darkTheme={darkTheme} />
+                {/* <MobileBtns darkTheme={darkTheme} /> */}
                 <SearchBox
                     handleFetch={handleFetch}
                     setInputQuestion={setInputQuestion}
