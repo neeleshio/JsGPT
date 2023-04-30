@@ -13,10 +13,10 @@ export const StyledOutputView = styled.div`
 
         .chatbubble__container {
             @media screen and (max-width: 768px) {
-                padding: 30px 30px 0 30px;
+                padding: 80px 30px 0 30px;
             }
             @media screen and (max-width: 580px) {
-                padding: 20px 15px 0 15px;
+                padding: 80px 15px 0 15px;
             }
         }
 
@@ -45,6 +45,7 @@ export const StyledOutputView = styled.div`
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
+            margin-top: 0;
         }
 
         @media screen and (max-width: 580px) {
@@ -78,6 +79,15 @@ export const StyledChatBubble = styled.div`
             position: absolute;
             top: -2.5px;
             font-size: 50px;
+
+            @media screen and (max-width: 768px) {
+                top: 0.5px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            padding: 10px 20px;
+            line-height: 20px;
         }
     }
 
@@ -288,7 +298,7 @@ export const StyledMobileBtns = styled.div`
 
 export const StyledMobileNav = styled.div`
     padding: 5px 15px;
-    height: 60px;
+    height: 50px;
     background-color: #10a37f;
     display: none;
     align-items: center;
@@ -317,5 +327,8 @@ export const StyledMobileNav = styled.div`
 
     @media screen and (max-width: 768px) {
         display: flex;
+        position: fixed;
+        z-index: 999;
+        width: 100%;
     }
 `;

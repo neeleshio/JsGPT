@@ -16,6 +16,10 @@ export const StyledSearchBox = styled.div`
         outline: none;
         z-index: 1;
         box-shadow: rgb(22 23 24 / 6%) 0px 10px 38px -10px, rgb(22 23 24 / 2%) 0px 10px 20px -15px;
+
+        @media screen and (max-width: 768px) {
+            height: 50px;
+        }
     }
 
     .shadow {
@@ -41,6 +45,10 @@ export const StyledSearchBox = styled.div`
         svg {
             width: 20px;
             margin-top: 6px;
+        }
+
+        @media screen and (max-width: 768px) {
+            height: 50px;
         }
     }
 
