@@ -48,6 +48,7 @@ export const StyledOutputView = styled.div`
             margin-top: 0;
             position: fixed;
             bottom: 0;
+            margin-bottom: 10px;
         }
 
         @media screen and (max-width: 580px) {
