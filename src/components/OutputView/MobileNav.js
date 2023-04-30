@@ -12,9 +12,13 @@ function MobileNav() {
                     JsGPT<span className="version">v1.3</span>
                 </span>
             </div>
-            <button className="mobilenav__social">
+            <a
+                className="mobilenav__social"
+                href="https://github.com/neeleshio/JsGPT"
+                target="_blank"
+                rel="noreferrer">
                 <Github />
-            </button>
+            </a>
         </StyledMobileNav>
     );
 }

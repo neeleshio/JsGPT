@@ -46,6 +46,8 @@ export const StyledOutputView = styled.div`
             justify-content: space-between;
             align-items: center;
             margin-top: 0;
+            position: fixed;
+            bottom: 0;
         }
 
         @media screen and (max-width: 580px) {
@@ -81,7 +83,7 @@ export const StyledChatBubble = styled.div`
             font-size: 50px;
 
             @media screen and (max-width: 768px) {
-                top: -0.5px;
+                top: -0.2px;
             }
         }
 
@@ -168,6 +170,10 @@ export const StyledChatBubble = styled.div`
                 height: 18px;
             }
         }
+    }
+
+    @media screen and (max-width: 768px) {
+        margin-bottom: 20px;
     }
 `;
 
