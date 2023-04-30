@@ -34,7 +34,9 @@ function OutputView() {
     }, [resp]);
 
     useEffect(() => {
-        chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+        if (inputQuestion) {
+            chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+        }
     }, [thinking]);
 
     const handleData = () => {

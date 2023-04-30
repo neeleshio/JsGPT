@@ -81,7 +81,7 @@ export const StyledChatBubble = styled.div`
             font-size: 50px;
 
             @media screen and (max-width: 768px) {
-                top: 0.5px;
+                top: -0.5px;
             }
         }
 
@@ -297,12 +297,12 @@ export const StyledMobileBtns = styled.div`
 `;
 
 export const StyledMobileNav = styled.div`
-    padding: 5px 15px;
+    padding: 5px 10px;
     height: 50px;
     background-color: #10a37f;
     display: none;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     color: #ffffff;
     border-radius: 0 0 4px 4px;
 
@@ -310,6 +310,22 @@ export const StyledMobileNav = styled.div`
         display: flex;
         align-items: center;
         margin-right: 30px;
+    }
+
+    .mobilenav__social {
+        display: flex;
+        align-items: center;
+        margin-right: 25px;
+        background: none;
+        border: none;
+        padding: 5px;
+        border-radius: 50px;
+        background-color: #1a2b14;
+
+        svg {
+            width: 30px;
+            height: 30px;
+        }
     }
 
     .logo-text {
