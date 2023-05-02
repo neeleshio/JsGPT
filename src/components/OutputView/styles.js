@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 export const StyledOutputView = styled.div`
     display: flex;
@@ -199,7 +199,7 @@ export const StyledMobileBtns = styled.div`
     position: relative;
 
     .mobilebtns__menu {
-        display: none;
+        display: flex;
         background-color: ${(props) => props.theme.bookmarksBg};
         font-size: 14px;
         position: absolute;

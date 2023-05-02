@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import ChatsContainer from '../../containers/Chats';
 import {
     handleInputQuery,
     setBookmarks,
@@ -106,13 +107,7 @@ function OutputView() {
         <StyledOutputView>
             <div className="outputview__top">
                 <MobileNav />
-                <ChatBubble
-                    data={data}
-                    inputQuestion={inputQuestion}
-                    loading={thinking}
-                    handleBookmark={handleBookmark}
-                    handleCopyAnswer={handleCopyAnswer}
-                />
+                <ChatsContainer />
                 <div ref={chatEndRef}></div>
             </div>
             <div className="outputview__bottom">

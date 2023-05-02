@@ -39,7 +39,7 @@ function MobileBtns({ darkTheme }) {
 
     return (
         <StyledMobileBtns>
-            <div className={showMenu ? 'mobilebtns__menu show-menu' : 'mobilebtns__menu'}>
+            <div className={showMenu ? 'mobilebtns__menu' : 'mobilebtns__menu'}>
                 {nav_items({
                     fill: lightThemeColors.primary
                 }).map((el) => (
@@ -53,9 +53,6 @@ function MobileBtns({ darkTheme }) {
                     <span>Bookmarks</span>
                 </div>
             </div>
-            <button onClick={handleHamburger}>
-                <Hamburger stroke={'#ffffff'} />
-            </button>
         </StyledMobileBtns>
     );
 }

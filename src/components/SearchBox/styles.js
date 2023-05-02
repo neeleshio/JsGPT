@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 export const StyledSearchBox = styled.div`
     display: flex;
@@ -22,37 +22,25 @@ export const StyledSearchBox = styled.div`
         }
     }
 
-    .shadow {
-        width: 80%;
-        height: 44px;
-        background: ${(props) => props.theme.shadowColor};
-        filter: blur(10px);
-        border-radius: 20px;
-        position: absolute;
-        z-index: 0;
-        top: 18px;
-        left: 60px;
+    @media screen and (max-width: 768px) {
+        width: 92%;
     }
+`;
 
-    button {
-        background: #10a37f;
-        border-radius: 0px 12px 12px 0px;
-        width: 80px;
-        height: 60px;
-        border-width: 0px;
-        cursor: pointer;
+export const StyledSendButton = styled.button`
+    background: #10a37f;
+    border-radius: 0px 12px 12px 0px;
+    width: 80px;
+    height: 60px;
+    border-width: 0px;
+    cursor: pointer;
 
-        svg {
-            width: 20px;
-            margin-top: 6px;
-        }
-
-        @media screen and (max-width: 768px) {
-            height: 50px;
-        }
+    svg {
+        width: 20px;
+        margin-top: 6px;
     }
 
     @media screen and (max-width: 768px) {
-        width: 92%;
+        height: 50px;
     }
 `;

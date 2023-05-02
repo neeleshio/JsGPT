@@ -2,6 +2,7 @@ import React from 'react';
 import Github from '../Svg/Github';
 import GptLogo from '../Svg/GptLogo';
 import Hamburger from '../Svg/Hamburger';
+import MobileBtns from './MobileBtns';
 import { StyledMobileNav } from './styles';
 
 function MobileNav() {
@@ -25,6 +26,7 @@ function MobileNav() {
                     <Hamburger stroke={'#ffffff'} />
                 </button>
             </div>
+            <MobileBtns />
         </StyledMobileNav>
     );
 }
