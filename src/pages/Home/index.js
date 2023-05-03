@@ -3,19 +3,23 @@ import Chats from '../../containers/Chats';
 import LeftBar from '../../containers/LeftBar';
 import SearchBar from '../../containers/SearchBar';
 import Topbar from '../../containers/Topbar';
-import { StyledHome, LeftContainer, RightContainer } from './styles';
+import { StyledHome } from './styles';
 
 function Home() {
     return (
         <StyledHome>
-            <LeftContainer>
+            <section className="left-section">
                 <LeftBar />
-            </LeftContainer>
-            <RightContainer>
+            </section>
+            <section className="right-section">
                 <Topbar />
-                <Chats />
-                <SearchBar />
-            </RightContainer>
+                <div className="chats-container">
+                    <Chats />
+                </div>
+                <div className="searchbar-container">
+                    <SearchBar />
+                </div>
+            </section>
         </StyledHome>
     );
 }

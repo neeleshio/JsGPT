@@ -5,14 +5,13 @@ import { useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { INITIAL_DATA_STATE } from '../../components/constants';
 import SearchBox from '../../components/SearchBox';
-import { handleInputQuery, setThinking } from '../../redux/queryReducer';
+import { handleInputQuery, setInputQuestion, setThinking } from '../../redux/queryReducer';
 
 function SearchBar() {
     const inputRef = useRef(null);
     const dispatch = useDispatch();
-    const [inputQuestion, setInputQuestion] = useState('');
     const [resp, setResp] = useState(null);
-    const { data } = useSelector((store) => store.queryReducer);
+    const { data, inputQuestion } = useSelector((store) => store.queryReducer);
 
     useEffect(() => {
         setTimeout(() => {
@@ -65,7 +64,12 @@ function SearchBar() {
 
     return (
         <>
-            <SearchBox onClick={handleFetch} onChange={setInputQuestion} inputRef={inputRef} />
+            <SearchBox
+                onClick={handleFetch}
+                onChange={setInputQuestion}
+                inputRef={inputRef}
+                dispatch={dispatch}
+            />
         </>
     );
 }

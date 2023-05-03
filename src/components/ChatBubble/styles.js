@@ -151,7 +151,7 @@ export const StyledAnswerBubble = styled.div`
 
         @media screen and (max-width: 992px) {
             width: 15%;
-            margin-right: '20px';
+            margin-right: 20px;
         }
 
         @media screen and (max-width: 768px) {

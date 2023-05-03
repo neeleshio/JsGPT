@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 export const StyledMobileNav = styled.div`
     padding: 5px 10px;
@@ -72,6 +72,7 @@ export const StyledMobileMenu = styled.div`
     width: 10%;
     margin-right: 20px;
     position: relative;
+    display: none;
 
     .mobilebtns__menu {
         display: flex;

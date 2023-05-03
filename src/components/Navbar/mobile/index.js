@@ -29,7 +29,6 @@ function MobileNav({ showMenu, data, onClick, handleHamburger }) {
                 </div>
                 <Menu showMenu={showMenu} data={data} onClick={onClick} />
             </StyledMobileNav>
-            <Menu data={data} />
         </>
     );
 }

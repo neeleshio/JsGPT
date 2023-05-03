@@ -21,10 +21,6 @@ export const StyledSearchBox = styled.div`
             height: 50px;
         }
     }
-
-    @media screen and (max-width: 768px) {
-        width: 92%;
-    }
 `;
 
 export const StyledSendButton = styled.button`

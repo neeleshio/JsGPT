@@ -1,4 +1,6 @@
 import React from 'react';
+import { useEffect } from 'react';
+import { useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import AnswerBubble from '../../components/ChatBubble/answer';
 import QuestionBubble from '../../components/ChatBubble/question';
@@ -6,8 +8,15 @@ import Loading from '../../components/Loading';
 import { handleInputQuery, resetBookmarks, setBookmarks } from '../../redux/queryReducer';
 
 function Chats() {
-    const { data, thinking, bookmarks } = useSelector((store) => store.queryReducer);
+    const { data, thinking, bookmarks, inputQuestion } = useSelector((store) => store.queryReducer);
     const dispatch = useDispatch();
+    const chatEndRef = useRef(null);
+
+    useEffect(() => {
+        if (inputQuestion) {
+            chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+        }
+    }, [thinking]);
 
     const handleBookmark = (item, id) => {
         const obj = [...data];
@@ -35,7 +44,7 @@ function Chats() {
     };
 
     return (
-        <div>
+        <>
             {data.map((el, idx) => (
                 <>
                     {el.ques && <QuestionBubble el={el} idx={idx} />}
@@ -50,7 +59,8 @@ function Chats() {
                 </>
             ))}
             {thinking && <Loading />}
-        </div>
+            <div ref={chatEndRef}></div>
+        </>
     );
 }
 
