@@ -46,7 +46,7 @@ export const StyledHome = styled.div`
             padding: 0 30px;
         }
         @media screen and (max-width: 768px) {
-            margin-top: 185px;
+            margin-top: 80px;
             margin-bottom: 55px;
         }
         @media screen and (max-width: 580px) {
