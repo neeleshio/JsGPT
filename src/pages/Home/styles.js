@@ -46,9 +46,8 @@ export const StyledHome = styled.div`
             padding: 0 30px;
         }
         @media screen and (max-width: 768px) {
-            height: 80%;
-            position: absolute;
-            top: 80px;
+            margin-top: 185px;
+            margin-bottom: 55px;
         }
         @media screen and (max-width: 580px) {
             padding: 0 15px;
