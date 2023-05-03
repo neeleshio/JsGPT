@@ -43,7 +43,7 @@ function Bookmark() {
         obj[obj.length - 1] = {
             ...data[obj.length - 1],
             ans: resp.text,
-            error: '',
+            error: resp.error,
             bookmarked: false
         };
 

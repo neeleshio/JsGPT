@@ -41,7 +41,6 @@ function SearchBar() {
         try {
             const response = await fetch(`http://localhost:5603/query?text=${inputQuestion}`);
             const data = await response.json();
-            console.log('data', data);
             setResp(data);
         } catch (error) {
             setTimeout(() => {
