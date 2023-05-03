@@ -12,9 +12,9 @@ function AnswerBubble({ el, idx, handleCopyAnswer, handleBookmark }) {
                     <GptLogo />
                 </span>
             </div>
-            <div className="bubble__text" style={{ paddingBottom: idx === 0 && 20 }}>
+            <div className="bubble__text" style={{ paddingBottom: (idx === 0 || el.error) && 20 }}>
                 <div>{el.ans}</div>
-                {el.bookmarked !== undefined && (
+                {el.bookmarked !== undefined && !el.error && (
                     <div className="bubble__toolbar">
                         <button onClick={() => handleCopyAnswer(el.ans)}>
                             <Copy />

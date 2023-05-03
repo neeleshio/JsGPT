@@ -6,6 +6,7 @@ export const StyledBookmark = styled.div`
     padding: 30px 25px;
     height: 50%;
     font-size: 14px;
+    color: #000000;
 
     .bookmark__wrapper {
         cursor: pointer;

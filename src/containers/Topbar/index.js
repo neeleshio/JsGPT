@@ -1,20 +1,21 @@
 import React from 'react';
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { INITIAL_DATA_STATE, nav_items } from '../../components/constants';
 import MobileNav from '../../components/Navbar/mobile';
-import { handleInputQuery, setThinking } from '../../redux/queryReducer';
+import {
+    handleHamburgerMenu,
+    handleInputQuery,
+    handleShowBookmarks,
+    setThinking
+} from '../../redux/queryReducer';
 import { handleToggleTheme } from '../../redux/themeReducer';
 
 function Topbar() {
     const dispatch = useDispatch();
-    const [showMenu, setShowMenu] = useState(false);
-
-    const handleHamburger = () => {
-        setShowMenu((prev) => !prev);
-    };
+    const { showHamburgerMenu, showBookmarks } = useSelector((store) => store.queryReducer);
 
     const handleOnClick = (title) => {
+        dispatch(handleHamburgerMenu());
         switch (title) {
             case 'Login':
                 break;
@@ -29,6 +30,9 @@ function Topbar() {
             case 'Dark Mode':
                 dispatch(handleToggleTheme());
                 break;
+            case 'Bookmarks':
+                dispatch(handleShowBookmarks(true));
+                break;
             default:
                 break;
         }
@@ -37,10 +41,12 @@ function Topbar() {
     return (
         <>
             <MobileNav
-                showMenu={showMenu}
+                showMenu={showHamburgerMenu}
                 data={nav_items}
-                handleHamburger={handleHamburger}
+                handleHamburger={handleHamburgerMenu}
                 onClick={handleOnClick}
+                dispatch={dispatch}
+                showBookmarks={showBookmarks}
             />
         </>
     );

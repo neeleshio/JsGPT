@@ -39,11 +39,17 @@ function SearchBar() {
         dispatch(handleInputQuery(obj));
 
         try {
-            const response = await fetch(`http://localhost:5601/query?text=${inputQuestion}`);
+            const response = await fetch(`http://localhost:5603/query?text=${inputQuestion}`);
             const data = await response.json();
+            console.log('data', data);
             setResp(data);
         } catch (error) {
-            setResp(error);
+            setTimeout(() => {
+                setResp({
+                    text: 'Something went wrong. Pls try again.',
+                    error: true
+                });
+            }, 1000);
         }
     };
 
@@ -55,7 +61,7 @@ function SearchBar() {
             ...data[obj.length - 1],
             ques: inputQuestion,
             ans: resp.text,
-            error: '',
+            error: resp.error,
             bookmarked: false
         };
 

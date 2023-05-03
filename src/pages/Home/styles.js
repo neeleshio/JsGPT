@@ -64,6 +64,8 @@ export const StyledHome = styled.div`
         @media screen and (max-width: 768px) {
             position: fixed;
             bottom: 10px;
+            width: calc(100vw - 60px);
+            padding: 0 30px;
         }
         @media screen and (max-width: 580px) {
             width: calc(100vw - 30px);

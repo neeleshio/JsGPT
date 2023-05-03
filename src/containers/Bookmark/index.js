@@ -3,7 +3,12 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Bookmarks from '../../components/Bookmarks';
-import { handleInputQuery, setThinking } from '../../redux/queryReducer';
+import {
+    handleHamburgerMenu,
+    handleInputQuery,
+    handleShowBookmarks,
+    setThinking
+} from '../../redux/queryReducer';
 
 function Bookmark() {
     const { data, bookmarks } = useSelector((store) => store.queryReducer);
@@ -20,6 +25,8 @@ function Bookmark() {
 
         dispatch(handleInputQuery(obj));
         dispatch(setThinking(true));
+        dispatch(handleShowBookmarks(false));
+        dispatch(handleHamburgerMenu());
 
         handleFetch(bookmark);
     };

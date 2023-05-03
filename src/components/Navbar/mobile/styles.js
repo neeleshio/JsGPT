@@ -34,7 +34,7 @@ export const StyledMobileNav = styled.div`
     .mobilenav__social {
         display: flex;
         align-items: center;
-        margin-right: 20px;
+        margin-right: 30px;
         background: none;
         border: none;
         padding: 5px;
@@ -42,8 +42,8 @@ export const StyledMobileNav = styled.div`
         background-color: #1a2b14;
 
         svg {
-            width: 30px;
-            height: 30px;
+            width: 25px;
+            height: 25px;
         }
     }
 
@@ -60,6 +60,17 @@ export const StyledMobileNav = styled.div`
         }
     }
 
+    .mobile-bookmark {
+        position: absolute;
+        top: 65px;
+        right: 25px;
+        display: none;
+
+        &.show-bookmarks {
+            display: block;
+        }
+    }
+
     @media screen and (max-width: 768px) {
         display: flex;
         position: fixed;
@@ -69,21 +80,19 @@ export const StyledMobileNav = styled.div`
 `;
 
 export const StyledMobileMenu = styled.div`
-    width: 10%;
-    margin-right: 20px;
-    position: relative;
+    position: absolute;
+    top: 65px;
+    right: 25px;
     display: none;
 
     .mobilebtns__menu {
         display: flex;
         background-color: ${(props) => props.theme.bookmarksBg};
         font-size: 14px;
-        position: absolute;
-        bottom: 75px;
         border-radius: 8px;
-        bottom: 80px;
         box-shadow: rgba(22, 23, 24, 0.35) 0px 10px 38px -10px,
             rgba(22, 23, 24, 0.2) 0px 10px 20px -15px;
+        flex-direction: column;
 
         div:nth-child(1) {
             padding-top: 16px;
@@ -102,6 +111,7 @@ export const StyledMobileMenu = styled.div`
                 display: block;
                 width: 100%;
                 margin-left: 10px;
+                color: #000000;
             }
         }
 
@@ -137,19 +147,10 @@ export const StyledMobileMenu = styled.div`
                 left: 100px;
             }
         }
+    }
 
-        :after {
-            content: '⏷';
-            position: absolute;
-            font-size: 50px;
-            color: ${(props) => props.theme.bookmarksBg};
-            bottom: -35px;
-            left: 12px;
-        }
-
-        &.show-menu {
-            display: block;
-        }
+    &.show-menu {
+        display: block;
     }
 
     button {
@@ -172,9 +173,5 @@ export const StyledMobileMenu = styled.div`
 
     @media screen and (min-width: 768px) {
         display: none;
-    }
-
-    @media screen and (max-width: 450px) {
-        margin-right: 30px;
     }
 `;

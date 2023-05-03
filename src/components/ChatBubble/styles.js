@@ -95,8 +95,7 @@ export const StyledAnswerBubble = styled.div`
     .bubble__text {
         border-radius: 12px;
         background-color: #ffffff;
-        padding: 20px 30px;
-        padding-bottom: 20px;
+        padding: 20px 30px 10px 30px;
         color: '#181818';
         width: 95%;
         position: relative;
@@ -168,6 +167,7 @@ export const StyledAnswerBubble = styled.div`
     .bubble__toolbar {
         display: flex;
         float: right;
+        padding-top: 5px;
 
         button {
             display: grid;

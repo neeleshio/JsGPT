@@ -1,11 +1,12 @@
 import React from 'react';
+import Bookmark from '../../../containers/Bookmark';
 import Github from '../../Svg/Github';
 import GptLogo from '../../Svg/GptLogo';
 import Hamburger from '../../Svg/Hamburger';
 import Menu from './menu';
 import { StyledMobileNav } from './styles';
 
-function MobileNav({ showMenu, data, onClick, handleHamburger }) {
+function MobileNav({ showMenu, data, onClick, handleHamburger, dispatch, showBookmarks }) {
     return (
         <>
             <StyledMobileNav>
@@ -23,11 +24,17 @@ function MobileNav({ showMenu, data, onClick, handleHamburger }) {
                         rel="noreferrer">
                         <Github />
                     </a>
-                    <button onClick={handleHamburger}>
+                    <button onClick={() => dispatch(handleHamburger())}>
                         <Hamburger stroke={'#ffffff'} />
                     </button>
                 </div>
                 <Menu showMenu={showMenu} data={data} onClick={onClick} />
+                <div
+                    className={
+                        showBookmarks ? 'mobile-bookmark show-bookmarks' : 'mobile-bookmark'
+                    }>
+                    <Bookmark />
+                </div>
             </StyledMobileNav>
         </>
     );

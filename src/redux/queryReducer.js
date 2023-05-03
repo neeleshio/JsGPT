@@ -11,7 +11,9 @@ const initialState = {
     ],
     inputQuestion: '',
     thinking: true,
-    bookmarks: BOOKMARKS
+    bookmarks: BOOKMARKS,
+    showHamburgerMenu: false,
+    showBookmarks: false
 };
 
 const queryReducer = createSlice({
@@ -34,11 +36,24 @@ const queryReducer = createSlice({
         },
         resetBookmarks(state, { payload }) {
             state.bookmarks = payload;
+        },
+        handleHamburgerMenu(state) {
+            state.showHamburgerMenu = !state.showHamburgerMenu;
+        },
+        handleShowBookmarks(state, { payload }) {
+            state.showBookmarks = payload;
         }
     }
 });
 
-export const { handleInputQuery, setInputQuestion, setThinking, setBookmarks, resetBookmarks } =
-    queryReducer.actions;
+export const {
+    handleInputQuery,
+    setInputQuestion,
+    setThinking,
+    setBookmarks,
+    resetBookmarks,
+    handleHamburgerMenu,
+    handleShowBookmarks
+} = queryReducer.actions;
 
 export default queryReducer.reducer;
