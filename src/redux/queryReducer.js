@@ -37,8 +37,12 @@ const queryReducer = createSlice({
         resetBookmarks(state, { payload }) {
             state.bookmarks = payload;
         },
-        handleHamburgerMenu(state) {
-            state.showHamburgerMenu = !state.showHamburgerMenu;
+        handleHamburgerMenu(state, { payload }) {
+            if (payload === true || payload === false) {
+                state.showHamburgerMenu = payload;
+            } else {
+                state.showHamburgerMenu = !state.showHamburgerMenu;
+            }
         },
         handleShowBookmarks(state, { payload }) {
             state.showBookmarks = payload;

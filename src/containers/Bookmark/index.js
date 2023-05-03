@@ -26,7 +26,7 @@ function Bookmark() {
         dispatch(handleInputQuery(obj));
         dispatch(setThinking(true));
         dispatch(handleShowBookmarks(false));
-        dispatch(handleHamburgerMenu());
+        dispatch(handleHamburgerMenu(false));
 
         handleFetch(bookmark);
     };
@@ -56,7 +56,12 @@ function Bookmark() {
             const data = await response.json();
             setResp(data);
         } catch (error) {
-            setResp(error);
+            setTimeout(() => {
+                setResp({
+                    text: 'Something went wrong. Pls try again.',
+                    error: true
+                });
+            }, 1000);
         }
     };
 
