@@ -1,9 +1,9 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 export const StyledLogoBtn = styled.div`
-    background: #10a37f;
+    background-color: #10a37f;
     border-radius: 12px;
-    color: #ffffff;
+    color: #fff;
     font-size: 28px;
     text-align: center;
     display: flex;

@@ -1,5 +1,5 @@
 import './App.css';
-import Home from './containers/Home';
+import Home from './pages/Home';
 import { ThemeProvider } from 'styled-components';
 import { darkThemeColors, lightThemeColors } from './components/Tools/theme';
 import { useSelector } from 'react-redux';
