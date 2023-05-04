@@ -8,4 +8,4 @@ echo "index_server running..."
 sleep 60
 
 # start the flask server
-python3 ./flask_demo.py &
+python3 ./flask_demo.py
