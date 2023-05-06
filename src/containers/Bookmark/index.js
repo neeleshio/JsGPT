@@ -52,7 +52,7 @@ function Bookmark() {
 
     const handleFetch = async (bookmark) => {
         try {
-            const response = await fetch(`http://localhost:5601/query?text=${bookmark}`);
+            const response = await fetch(`${process.env.API_ENDPOINT}/query?text=${bookmark}`);
             const data = await response.json();
             setResp(data);
         } catch (error) {

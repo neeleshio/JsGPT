@@ -39,7 +39,9 @@ function SearchBar() {
         dispatch(handleInputQuery(obj));
 
         try {
-            const response = await fetch(`http://localhost:5603/query?text=${inputQuestion}`);
+            const response = await fetch(
+                `${process.env.REACT_APP_API_ENDPOINT}/query?text=${inputQuestion}`
+            );
             const data = await response.json();
             setResp(data);
         } catch (error) {

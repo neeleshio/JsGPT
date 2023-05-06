@@ -4,9 +4,8 @@ WORKDIR /app
 
 COPY . .
 
-RUN pip install -r requirements.txt && pip cache purge && \
-    cd react_frontend && npm install && npm install -g serve && cd .. 
+RUN pip install -r requirements.txt && pip cache purge
 
 # Flask
 CMD ["sh", "launch_app.sh"]
-EXPOSE 5601 3000
+EXPOSE 5601
