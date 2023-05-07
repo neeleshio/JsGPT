@@ -1,0 +1,81 @@
+﻿1. Data types
+JavaScript provides 2 types of data-types, Primitive type and Non-Primitive type.
+
+Primitive type: Data structure that allows you to store only single data type values.
+1. String
+2. Number
+3. BigInt
+4. Boolean
+5. Null
+6. Undefined
+7. Symbol
+
+
+NonPrimitive type: Data structure that allows you to store multiple data type values.
+1. Array
+2. Object
+⬆ Back to Top
+2. JavaScript vs ECMAScript vs ES6
+JavaScript is a programming language.
+ECMAScript is the specification for JavaScript.
+ES6 is the most prominent version of JavaScript, released in the year 2015.
+⬆ Back to Top
+3. Most used ES6 features.
+1. Let & Const
+2. Template Literals
+3. Arrow Functions
+4. Rest & Spread operators
+5. Default parameters
+6. Destructuring assignment
+7. Classes
+8. Promises
+9. Modules
+⬆ Back to Top
+4. typeof
+typeof operator can be used to find the data type of a value.
+typeof "superman" // 'string'
+typeof "" // 'string'
+typeof 100 // 'number'
+typeof NaN // 'number'
+typeof true // 'boolean'
+typeof false // 'boolean'
+typeof 1n // 'bigint'
+typeof BigInt(9007199254740991) // 'bigint'
+typeof function(){} // 'function'
+typeof [] // 'object'
+typeof {} // 'object'
+typeof null // 'object'
+typeof new Date() // 'object'
+typeof undefined // 'undefined'
+typeof mycar // 'undefined'
+⬆ Back to Top
+5. Execution Context & Global Execution Context
+Everything in JavaScript happens inside an Execution context. An Execution context is like a container or environment where the JavaScript code evaluated & executed.
+A Global execution context gets created even before it starts to execute any code, so it'll always present at the bottom of the call stack. All the global code i.e. code which is not inside any function or object is executed inside the Global execution context. Inside the Global execution contex, a new Execution context gets created on every time a new function is invoked.
+Execution context is composed of 2 components,
+1. Memory component
+This is the place where all the variables and functions are stored as a key-value pairs.
+2. Code component
+This is where the code gets executed one line at a time.
+⬆ Back to Top
+7. Call stack
+A Call stack is a data structure where data can be pushed & popped and follows the LIFO( Last in First out ) principle.
+In JavaScript, the JavaScript Engine has its own Call stack which keeps track of functions to be executed. So whenever a function is invoked, it is pushed into the Call stack.
+⬆ Back to Top
+8. Synchronous Single threaded
+JavaScript is a Synchronous Single threaded language. So when we say Single threaded that means it can only execute one command at a time.
+So when we say Synchronous Single threaded that means it can move to the next command only after it finishes executing the current line/command.
+⬆ Back to Top
+9. Hoisting
+In plain english Hoist means raise or lift. In Javascript Hoisting is the default behaviour of moving all the declarations to the top of their scope before code execution. So if we try to access any variables or functions before their declaration, JS won't throw any error.
+In other words, we can also say that Hoisting is a phenomenon in JS by which we can access variables & functions even before their declaration.
+console.log(x) // undefined
+console.log(foo()) // hello from foo
+
+
+var x = "hello"
+
+
+function foo() {
+  console.log("hello from foo")
+}
