@@ -17,14 +17,6 @@ def initialize_index():
     documents = SimpleDirectoryReader('./data').load_data()
     index = GPTVectorStoreIndex.from_documents(documents)
 
-    service_context = ServiceContext.from_defaults(chunk_size_limit=512)
-
-    if os.path.exists(index_name):
-            index = GPTVectorStoreIndex.load_from_disk(index_name, service_context=service_context)
-    else:
-        index = GPTVectorStoreIndex([], service_context=service_context)
-        index.save_to_disk(index_name)
-
 def query_index(query_text):
     """Query the global index."""
     global index
