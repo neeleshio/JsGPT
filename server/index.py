@@ -4,7 +4,7 @@ from flask import Flask, request, jsonify, make_response
 from flask_cors import CORS
 
 # NOTE: for local testing only, do NOT deploy with your key hardcoded
-os.environ["OPENAI_API_KEY"] = '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'
+os.environ["OPENAI_API_KEY"] = os.environ.get('OPENAI_API_KEY')
 
 app = Flask(__name__)
 CORS(app)
