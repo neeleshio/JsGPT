@@ -4,7 +4,7 @@ from flask import Flask, request, jsonify, make_response
 from flask_cors import CORS
 
 # NOTE: for local testing only, do NOT deploy with your key hardcoded
-os.environ["OPENAI_API_KEY"] = os.environ.get('OPENAI_API_KEY')
+os.environ["OPENAI_API_KEY"] = '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'
 
 app = Flask(__name__)
 CORS(app)
@@ -16,12 +16,6 @@ def initialize_index():
     global index
     documents = SimpleDirectoryReader('./data').load_data()
     index = GPTVectorStoreIndex.from_documents(documents)
-
-def query_index(query_text):
-    """Query the global index."""
-    global index
-    response = index.query(query_text)
-    return response
 
 
 @app.route("/query", methods=["GET"])
@@ -41,4 +35,4 @@ def home():
 
 if __name__ == "__main__":
     initialize_index()
-    app.run(host="0.0.0.0", port=5601)
+    app.run(host="0.0.0.0", debug=False, port=5001)
