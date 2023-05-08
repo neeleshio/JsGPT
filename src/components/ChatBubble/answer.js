@@ -16,7 +16,7 @@ function AnswerBubble({ el, idx, handleCopyAnswer, handleBookmark }) {
                 <div>{el.ans}</div>
                 {el.bookmarked !== undefined && !el.error && (
                     <div className="bubble__toolbar">
-                        <button onClick={() => handleCopyAnswer(el.ans)}>
+                        <button className="copy__btn" onClick={() => handleCopyAnswer(el.ans)}>
                             <Copy />
                         </button>
                         <button

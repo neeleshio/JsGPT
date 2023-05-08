@@ -186,6 +186,14 @@ export const StyledAnswerBubble = styled.div`
                 transition: all 0.5s ease-out;
             }
 
+            &.copy__btn {
+                :hover {
+                    background-color: #10a37f;
+                    transition: all 0.5s ease-out;
+                    transform: scale(0.9);
+                }
+            }
+
             &.bookmark__btn {
                 svg {
                     width: 15px;
