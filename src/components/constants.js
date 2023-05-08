@@ -25,7 +25,9 @@ export const WELCOME_MSG =
 export const BOOKMARKS = [
     'What is Javascript?',
     'Is Javascript Asynchronous?',
-    'Explain Scope chain in Javascript'
+    "What's the typeof NaN",
+    'Explain Scope chain',
+    'Main Thread blocking'
 ];
 
 export const INITIAL_DATA_STATE = {
