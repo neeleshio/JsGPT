@@ -1,8 +1,9 @@
 import Trash from './Svg/Trash';
 import Moon from './Svg/Moon';
 import User from './Svg/User';
+import Theme from './Svg/Theme';
 
-export const nav_items = ({ fill }) => {
+export const nav_items = ({ fill, darkTheme }) => {
     return [
         {
             icon: <User fill={fill} />,
@@ -13,8 +14,8 @@ export const nav_items = ({ fill }) => {
             title: 'Clear Conversation'
         },
         {
-            icon: <Moon fill={fill} />,
-            title: 'Dark Mode'
+            icon: <Theme fill={fill} />,
+            title: darkTheme ? 'Light Mode' : 'Dark Mode'
         }
     ];
 };

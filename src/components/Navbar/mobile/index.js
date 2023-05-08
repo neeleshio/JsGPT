@@ -6,7 +6,15 @@ import Hamburger from '../../Svg/Hamburger';
 import Menu from './menu';
 import { StyledMobileNav } from './styles';
 
-function MobileNav({ showMenu, data, onClick, handleHamburger, dispatch, showBookmarks }) {
+function MobileNav({
+    showMenu,
+    data,
+    onClick,
+    handleHamburger,
+    dispatch,
+    showBookmarks,
+    darkTheme
+}) {
     return (
         <>
             <StyledMobileNav>
@@ -28,7 +36,7 @@ function MobileNav({ showMenu, data, onClick, handleHamburger, dispatch, showBoo
                         <Hamburger stroke={'#ffffff'} />
                     </button>
                 </div>
-                <Menu showMenu={showMenu} data={data} onClick={onClick} />
+                <Menu showMenu={showMenu} data={data} onClick={onClick} darkTheme={darkTheme} />
                 <div
                     className={
                         showBookmarks ? 'mobile-bookmark show-bookmarks' : 'mobile-bookmark'

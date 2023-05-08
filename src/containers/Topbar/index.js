@@ -13,6 +13,7 @@ import { handleToggleTheme } from '../../redux/themeReducer';
 function Topbar() {
     const dispatch = useDispatch();
     const { showHamburgerMenu, showBookmarks } = useSelector((store) => store.queryReducer);
+    const { darkTheme } = useSelector((store) => store.themeReducer);
 
     const handleOnClick = (title) => {
         dispatch(handleHamburgerMenu());
@@ -28,6 +29,9 @@ function Topbar() {
                 }, 500);
                 break;
             case 'Dark Mode':
+                dispatch(handleToggleTheme());
+                break;
+            case 'Light Mode':
                 dispatch(handleToggleTheme());
                 break;
             case 'Bookmarks':
@@ -47,6 +51,7 @@ function Topbar() {
                 onClick={handleOnClick}
                 dispatch={dispatch}
                 showBookmarks={showBookmarks}
+                darkTheme={darkTheme}
             />
         </>
     );

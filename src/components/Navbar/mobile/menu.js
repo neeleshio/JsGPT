@@ -2,11 +2,11 @@ import React from 'react';
 import Bookmark from '../../Svg/Bookmark';
 import { StyledMobileMenu } from './styles';
 
-function Menu({ showMenu, data, onClick }) {
+function Menu({ showMenu, data, onClick, darkTheme }) {
     return (
         <StyledMobileMenu className={showMenu ? 'show-menu' : ''}>
             <div className="mobilebtns__menu">
-                {data({ fill: '#000000' }).map((el) => (
+                {data({ fill: '#000000', darkTheme }).map((el) => (
                     <div onClick={() => onClick(el.title)}>
                         {el.icon}
                         <span>{el.title === 'Clear Conversation' ? 'Clear' : el.title}</span>

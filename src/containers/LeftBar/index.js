@@ -27,6 +27,9 @@ function LeftBar() {
             case 'Dark Mode':
                 dispatch(handleToggleTheme());
                 break;
+            case 'Light Mode':
+                dispatch(handleToggleTheme());
+                break;
             default:
                 break;
         }
@@ -38,7 +41,8 @@ function LeftBar() {
             <Navbar
                 onClick={handleOnClick}
                 data={nav_items}
-                theme={darkTheme ? darkThemeColors.primary : lightThemeColors.primary}
+                fill={darkTheme ? darkThemeColors.primary : lightThemeColors.primary}
+                darkTheme={darkTheme}
             />
             <LogoBtn />
         </>
