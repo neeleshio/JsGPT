@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { queryIndex } from '../../apis';
 import { INITIAL_DATA_STATE } from '../../components/constants';
 import SearchBox from '../../components/SearchBox';
 import { handleInputQuery, setInputQuestion, setThinking } from '../../redux/queryReducer';
@@ -39,17 +40,11 @@ function SearchBar() {
         dispatch(handleInputQuery(obj));
 
         try {
-            const response = await fetch(
-                `${process.env.REACT_APP_API_ENDPOINT}/query?text=${inputQuestion}`
-            );
-            const data = await response.json();
+            const data = await queryIndex(inputQuestion);
             setResp(data);
         } catch (error) {
             setTimeout(() => {
-                setResp({
-                    text: 'Something went wrong. Pls try again.',
-                    error: true
-                });
+                setResp({ output: 'Something went wrong. Pls try again.', error: true });
             }, 1000);
         }
     };
@@ -61,7 +56,7 @@ function SearchBar() {
         obj[obj.length - 1] = {
             ...data[obj.length - 1],
             ques: inputQuestion,
-            ans: resp.text,
+            ans: resp.output,
             error: resp.error,
             bookmarked: false
         };

@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { queryIndex } from '../../apis';
 import Bookmarks from '../../components/Bookmarks';
 import {
     handleHamburgerMenu,
@@ -42,7 +43,7 @@ function Bookmark() {
 
         obj[obj.length - 1] = {
             ...data[obj.length - 1],
-            ans: resp.text,
+            ans: resp.output,
             error: resp.error,
             bookmarked: false
         };
@@ -52,15 +53,11 @@ function Bookmark() {
 
     const handleFetch = async (bookmark) => {
         try {
-            const response = await fetch(`${process.env.API_ENDPOINT}/query?text=${bookmark}`);
-            const data = await response.json();
+            const data = await queryIndex(bookmark);
             setResp(data);
         } catch (error) {
             setTimeout(() => {
-                setResp({
-                    text: 'Something went wrong. Pls try again.',
-                    error: true
-                });
+                setResp({ output: 'Something went wrong. Pls try again.', error: true });
             }, 1000);
         }
     };

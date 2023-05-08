@@ -1,10 +1,10 @@
 export const queryIndex = async (query) => {
     const response = await fetch(`${process.env.REACT_APP_API_ENDPOINT}/query?text=${query}`);
     if (!response.ok) {
-        return { text: 'Error in query', sources: [] };
+        setTimeout(() => {
+            return { output: 'Something went wrong. Pls try again.', error: true };
+        }, 1000);
     }
 
-    const queryResponse = await response.json();
-
-    return queryResponse;
+    return await response.json();
 };
