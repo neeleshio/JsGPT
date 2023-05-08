@@ -8,6 +8,7 @@ import {
     handleHamburgerMenu,
     handleInputQuery,
     handleShowBookmarks,
+    setInputQuestion,
     setThinking
 } from '../../redux/queryReducer';
 
@@ -26,6 +27,7 @@ function Bookmark() {
 
         dispatch(handleInputQuery(obj));
         dispatch(setThinking(true));
+        dispatch(setInputQuestion(bookmark));
         dispatch(handleShowBookmarks(false));
         dispatch(handleHamburgerMenu(false));
 

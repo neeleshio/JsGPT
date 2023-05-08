@@ -5,6 +5,7 @@ export const StyledLoading = styled.div`
     align-items: center;
     color: #ffffff;
     margin-left: 20px;
+    margin-bottom: 20px;
     background: #262626;
     border-radius: 6px;
     padding: 0 10px;
@@ -12,5 +13,9 @@ export const StyledLoading = styled.div`
 
     span {
         margin-right: 10px;
+    }
+
+    @media screen and (max-width: 768px) {
+        margin-bottom: 0;
     }
 `;
