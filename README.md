@@ -2,7 +2,7 @@
 <h4 align="center">JsGPT - ChatGPT for JavaScript</h4>
 <div align="center">
   <a href="https://jsgpt.vercel.app"><img src="https://img.shields.io/badge/host-vercel-success">
-  <a href="https://github.com/mathdroid/covid-19-api"><img src="https://img.shields.io/badge/server-blueviolet"><a/>
+  <a href="https://github.com/neeleshio/JsGPT/tree/master/server"><img src="https://img.shields.io/badge/flask-server-blueviolet"><a/>
   <img src="https://img.shields.io/badge/contributions-welcome-orange.svg">
   <img src="https://img.shields.io/badge/license-MIT-blue.svg">
   <img src="https://visitor-badge.laobi.icu/badge?page_id=JsGPT-badge">
