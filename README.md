@@ -13,38 +13,53 @@
 <h1 align="center">
   <img src="https://user-images.githubusercontent.com/56342160/237042867-ce01ce6a-4414-4f9c-bace-0849f3516010.gif" alt="demo" width="600">
 </h1>
+    
+## 🗂️ Intro
+    
+The backend is a [LlamaIndex](https://gpt-index.readthedocs.io/en/latest/) powered Flask server and the frontend is built with ReactJs.
+    
+2 main libraries used to index our custom data are:
+1. [LlamaIndex](https://gpt-index.readthedocs.io/en/latest/) :- LlamaIndex (GPT Index) is a package that provides a central interface to connect your [LLM’s(large language model)](https://en.wikipedia.org/wiki/Large_language_model) with external data.
+2. [LangChain](https://python.langchain.com/en/latest/index.html) :- LangChain is a framework for developing applications powered by language models.
 
-## Installation
+## 🚀 To Run locally
 
-You'll need [Git](https://git-scm.com) and [npm](http://npmjs.com) installed on your computer.
-
-## Usage
+You'll need [git](https://git-scm.com), [npm](http://npmjs.com), [python](https://www.python.org/downloads/) & [pip](https://pypi.org/project/pip/) installed on your computer.
 
 From your command line:
 
 ```
 # Clone this repository
-$ git clone https://github.com/neeleshio/corona-tracker.git
+$ git clone https://github.com/neeleshio/JsGPT.git
 
 # Go into the repository
-$ cd corona-tracker
+$ cd JsGPT
 
 # Install dependencies
 $ npm install
 
-# Run the server
+# Run the frontend
 $ npm start
+    
+// To run the backend server
+# Go into the server folder
+$ cd server
+    
+# Install dependencies
+$ pip3 install -r requirements.txt
+    
+# Start the server
+$ OPENAI_API_KEY=your_key python3 ./index.py
 ```
+    
+    
+Generate an [OpenAI](https://platform.openai.com/account/api-keys) API key.
+    
 
 ## Become a Contributor :
 
-1. Clone the repo and create a new branch: $ git checkout https://github.com/neeleshio/corona-tracker.git
+1. Clone the repo and create a new branch: $ git checkout https://github.com/neeleshio/JsGPT.git
 
 2. Make changes and test.
 
 3. Submit Pull Request with decent description of changes.
-
-
-## Support
-
-<a href="https://www.buymeacoffee.com/neeleshio" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/purple_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
