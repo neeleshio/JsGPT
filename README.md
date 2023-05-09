@@ -11,7 +11,7 @@
 ## Demo
 
 <h1 align="center">
-  <img src="https://raw.githubusercontent.com/neeleshio/Corona-Tracker/master/Sequence%20%231.gif" alt="demo" width="600">
+  <img src="https://user-images.githubusercontent.com/56342160/237042867-ce01ce6a-4414-4f9c-bace-0849f3516010.gif" alt="demo" width="600">
 </h1>
 
 ## Installation
