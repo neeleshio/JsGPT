@@ -18,9 +18,8 @@
     
 The backend is a [LlamaIndex](https://gpt-index.readthedocs.io/en/latest/) powered Flask server and the frontend is built with ReactJs.
     
-2 main libraries used to index our custom data are:
+Main library used to index our custom data are:
 1. [LlamaIndex](https://gpt-index.readthedocs.io/en/latest/) :- LlamaIndex (GPT Index) is a package that provides a central interface to connect your [LLM’s(large language model)](https://en.wikipedia.org/wiki/Large_language_model) with external data.
-2. [LangChain](https://python.langchain.com/en/latest/index.html) :- LangChain is a framework for developing applications powered by language models.
 
 ## 🚀 To Run locally
 
